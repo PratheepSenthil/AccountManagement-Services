@@ -7,14 +7,14 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Account{
 	@Id
 	private String accNo;
-	private String cid;
-	private double balance;
+	private String cid="";
+	private double balance=0.0;
 	
 	public Account() {
 		
 	}
 	
-	public Account(String accNo,String cid,Double balance){
+	public Account(String accNo,String cid,double balance){
 		super();
 		this.accNo= accNo;
 		this.cid= cid;
@@ -45,6 +45,8 @@ public class Account{
 		this.balance = balance;
 	}
 
-	
+//	Transaction ID,TRN,Date,Time,Type(Debit/Credit),Sub Type(Cash/Transfer),Balance,Account No,Customer ID
+//	Users
+//	User ID,Password,Role	
 	
 }
